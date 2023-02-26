@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
+This web app can be used to create a shopping list or a to-do list. 
+Features available are:
+1. Add a new item
+2. Remove an existing item from the list.
+3. Mark an item as completed.
+
+There is no API integration so the data is not saved in any database.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
