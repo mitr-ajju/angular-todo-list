@@ -1,2 +1,24 @@
-<app-top-header></app-top-header>
-<router-outlet></router-outlet>
+<div style="text-align:center">
+    <h1>
+      {{ title }}!
+    </h1>
+</div>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="New Item" aria-label="Item Name" aria-describedby="basic-addon2" [(ngModel)]="newItem">
+        <button class="btn btn-outline-secondary btn-primary" type="button" id="add-item" style="color:white" (click)="addItem()">Add Item</button>
+      </div>
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let item of listItems; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td class="{{(item.isCompleted?'completed':'')}}" (click)="itemCompleted(i)">{{item.itemName}}</td>
+            <td style="color: royalblue;" (click)="removeItem(i)">Remove Item</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
